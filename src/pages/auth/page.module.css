@@ -1,0 +1,59 @@
+.authPageContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6); /* Fundo transparente */
+    z-index: 10;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5em;
+    margin-top: 1em;
+}
+
+
+button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="button"] {
+    background-color: #b1b1b1;
+}
+
+button[type="submit"] {
+    background-color: #191919;
+    color: #fff;
+}
+
+.authTitle {
+    color: #191919; /* Escolha uma cor que contraste bem com o fundo */
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+

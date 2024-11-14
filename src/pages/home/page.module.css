@@ -1,0 +1,193 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Aplicar fundo preto no html e body para cobrir toda a tela */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+  }
+  
+  /* Container principal */
+  .pageContainer {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Banner Parallax */
+  .parallaxBanner {
+    width: 100vw;
+    height: 480px; /* ajuste conforme necessário */
+    background-image: url('/src/images/banner.jpg'); /* caminho ajustado */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    padding-right: 10%; /* Ajuste o valor conforme necessário */
+    
+  }
+  
+  
+  
+  /* Estilos do Carrossel */
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .carouselSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .imageTextContainer {
+    display: flex;
+    justify-content: space-between; /* Garante o espaçamento entre a imagem e o texto */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .carouselImage {
+    width: 780px; /* A imagem ocupa 70% da largura do carrossel */
+    height: 500px;
+    border-radius: 8px;
+  }
+  
+  .carouselText {
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo na vertical */
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .carouselText h2 {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .agendeButton {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .agendeButton:hover {
+    background-color: #ff4500;
+  }
+  
+  .carouselButton:focus {
+    outline: none;
+  }
+  
+  /* Botões de Navegação (Voltar/Avançar) */
+  .carouselButtonLeft {
+    position: flex;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carouselButtonRight {
+    position: flex;
+    right: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 700px) {
+    .carouselContainer {
+      flex-direction: column;
+    }
+    .carouselImage, .carouselText {
+      width: 100%;
+    }
+    .carouselText {
+      padding: 15px;
+    }
+    .carouselButton {
+      font-size: 1.5em;
+      padding: 0.5em;
+    }
+  }
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 2em; /* Espaço entre os quadrados */
+    padding: 2em;
+    width: 100%;
+  }
+  .serviceCard {
+    position: relative; /* Permite o uso de posicionamento absoluto para o texto */
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0.2em;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem ocupar todo o espaço sem distorção */
+    border-radius: 8px;
+  }
+  
+  .serviceText {
+    position: absolute; /* Coloca o texto sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Corrige o posicionamento para um centro perfeito */
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 1em;
+    border-radius: 8px;
+    width: 80%; /* Garante que o texto ocupe uma boa largura e não fique muito apertado */
+  }
+  
+  .serviceText h1 {
+    font-size: 1em;
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-weight: bold;
+  }
+  
+  .serviceText p {
+    font-size: 0.7em;
+    margin-top: 5px;
+  }
+  
